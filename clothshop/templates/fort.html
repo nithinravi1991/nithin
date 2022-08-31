@@ -1,0 +1,139 @@
+{%extends 'theme.html'%}
+{%block content%}
+<nav class="navbar fixed-top navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand" href="#"><font face="Freestyle Script", size="48", color="Violet">ClothShop</font></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto mb-2 mb-sm-0">
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Men
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">t shirts</a></li>
+            <li><a class="dropdown-item" href="#">Formal Shirts</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="#">Casual Shirts</a></li>
+          </ul>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Women</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Kids</a>
+        </li>
+        <li class="btn btn-link"><a href="#">Sign Up</a>
+        </li>
+      </ul>
+    </div>
+    <form class="d-flex">
+      <input type="text" class="form-control me-2">
+      <button type="submit" class="btn btn-outline-danger">Search</button>
+    </form>
+  </div>
+</nav>
+</br>
+</br>
+</br>
+</br>
+<div class="container-fluid">
+<a href="#"><center><img src="https://images.bewakoof.com/uploads/grid/app/deal-banner-revamp-tshirts-m2-1661623117.jpg" style="height: 300px; width:1400px"</center></a>
+</div>
+</br>
+<div class="container">
+  <div class="row">
+    {%for Product in clothshop%}
+    <div class="col-md-3">
+      <div class="card">
+  <img src="{{Product.Image}}" class="card-img-top" alt="Out of Stock" style="height:250px">
+  <div class="card-body">
+    <h5 class="card-title" style="white-space: nowrap; overflow:hidden"><font size="3">{{Product.Name}}</font></h5>
+    <p class="card-text">Rs {{Product.Price}}</p>
+    <a href="https://www.myntra.com/men-tshirts?f=Brand%3AKappa%2CLevis%2CPeter%20England%2CTommy%20Hilfiger" class="btn btn-primary">Buy Now</a>
+    <a href="" class="btn btn-warning">Add to cart</a>
+  </div>
+</div>
+
+    </div>
+
+    {%endfor%}
+
+
+  </div>
+
+
+</div>
+<footer class="bd-footer py-5 mt-5 bg-dark">
+  <div class="container py-5">
+    <div class="row">
+      <div class="col-lg-3 col-md-6 col-sm-6">
+        <div class="footer_widget">
+          <font color="white"><h6>SHOPPING</h6></font>
+          <ul>
+            <li>
+              <a href="#"><font color="white">Clothing Store</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">Trending T shirts</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">Online Shopping</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">Combo Offers</a></font>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+        <div class="footer_widget">
+          <font color="white"><h6>CUSTOMER POLICIES</h6></font>
+          <ul>
+            <li>
+              <a href="#"><font color="white">Contact Us</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">FAQ</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">Payment Terms</a></font>
+            </li>
+            <li>
+              <a href="#"><font color="white">Return & Cancellation</a></font>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-lg-3 offset-lg-1 col-md-6 col-sm-6">
+        <div class="footer_widget">
+          <font color="white"><h6>NEWSLETTER</h6></font>
+          <div class="footer_newsletter">
+            <font color="white"<p>Be the first to know about new arrivals, look books, sales & promos!</p></font>
+            <form action="#">
+              <input type="text" placeholder="Your email">
+              <button type="submit">
+                <span class="icon_mail_alt">Go</span>
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    </br>
+    </br>
+    <div class="row">
+      <div class="col-lg-12 text-center">
+        <div class="footer copyright text">
+          <font color="cyan"><p>Copyright(c) 20222025 All rights reserved | This template is made with </font><font color="violet">LOVE</font><font color="cyan"> by</font>
+          <a href="#"><font face="Freestyle Script" size="20" color="violet"> ClothShop</font></a>
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
+
+{%endblock%}
